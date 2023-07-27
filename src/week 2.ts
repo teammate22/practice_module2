@@ -23,6 +23,35 @@ function sumEl(arr: any){
 }
 sumEl(arr)
 
+function maxEl(arr: any){
+  let max = 0
+  for(let i of arr){
+    if(i > max) max = i
+  }
+  console.log(`Максимальное число ${max}`)
+}
+maxEl(arr)
+
+function addByIndex(arr :any, index: number, element: any){
+  for(let i in arr){
+    if(+i == index){
+      arr.splice(i, 0, element)
+    }
+  }
+  showArr(arr)
+}
+addByIndex(arr, 5, 'new element')
+
+function deleteByIndex(arr :any, index: number){
+  for(let i in arr){
+    if(+i == index){
+      arr.splice(i, 1)
+    }
+  }
+  showArr(arr)
+}
+deleteByIndex(arr, 10)
+
 // задание 2
 
 // задание 3
